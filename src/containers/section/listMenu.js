@@ -21,7 +21,6 @@ export default class ListAut extends React.Component {
     }
 
     async searchAutor(){
-        console.log(this.pesquisa)
         const response = await api.get('');
         this.setState({
             filmes: response.data.hits.filter(b=> b.author.toLowerCase().includes(this.state.pesquisa.toLowerCase()))  
